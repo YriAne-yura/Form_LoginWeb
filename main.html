@@ -1,0 +1,236 @@
+<html>
+ <head>
+  <title>
+   Sign In
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .container img {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+        p {
+            color: #6b7280;
+            margin: 8px 0 24px;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+        .social-buttons button {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 10px;
+            width: 48%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+        .social-buttons button:hover {
+            transform: scale(1.05);
+        }
+        .social-buttons button img {
+            width: 24px;
+            height: 24px;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .divider:not(:empty)::before {
+            margin-right: .25em;
+        }
+        .divider:not(:empty)::after {
+            margin-left: .25em;
+        }
+        form {
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        input[type="email"], input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+            border-color: #6366f1;
+        }
+        .password-container {
+            position: relative;
+        }
+        .password-container input {
+            padding-right: 40px;
+        }
+        .password-container .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .password-container .toggle-password:hover {
+            color: #6366f1;
+        }
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .remember-me input {
+            margin-right: 8px;
+        }
+        .remember-me label {
+            margin: 0;
+        }
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 24px;
+        }
+        .forgot-password a {
+            color: #6366f1;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .sign-in-button {
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .sign-in-button:hover {
+            background: linear-gradient(90deg, #8b5cf6, #6366f1);
+        }
+        .create-account {
+            margin-top: 24px;
+            font-size: 14px;
+        }
+        .create-account a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <img alt="Logo" src="https://placehold.co/50x50"/>
+   <h2>
+    Welcome back
+   </h2>
+   <p>
+    Please enter your details to sign in
+   </p>
+   <div class="social-buttons">
+    <button>
+     <img alt="Google logo" src="https://th.bing.com/th/id/OIP.Din44az7iZZDfbsrD1kfGQHaHa?pid=ImgDetMain"/>
+    </button>
+    <button>
+     <img alt="Facebook logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/512px-2021_Facebook_icon.svg.png"/>
+    </button>
+   </div>
+   <div class="divider">
+    or
+   </div>
+   <form>
+    <label for="email">
+     Email address
+    </label>
+    <input id="email" placeholder="Enter your email" type="email"/>
+    <label for="password">
+     Password
+    </label>
+    <div class="password-container">
+     <input id="password" placeholder="Enter your password" type="password"/>
+     <i class="fas fa-eye toggle-password">
+     </i>
+    </div>
+    <div class="remember-me">
+     <input id="remember" type="checkbox"/>
+     <label for="remember">
+      Remember for 30 days
+     </label>
+    </div>
+    <div class="forgot-password">
+     <a href="#">
+      Forgot password?
+     </a>
+    </div>
+    <button class="sign-in-button" type="submit">
+     Sign in
+    </button>
+   </form>
+   <div class="create-account">
+    Don't have an account?
+    <a href="#">
+     Create account
+    </a>
+   </div>
+  </div>
+  <script>
+   document.querySelector('.toggle-password').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+        });
+  </script>
+ </body>
+</html>
